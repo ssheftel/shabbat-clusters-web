@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyA6cwG3Xrwsav1gGFBB65XS-yOwfjd8yYc',
-    authDomain: 'shabbat-clusters.firebaseapp.com',
-    databaseURL: 'https://shabbat-clusters.firebaseio.com',
-    projectId: 'shabbat-clusters',
-    storageBucket: 'shabbat-clusters.appspot.com',
-    messagingSenderId: '140295100750'
+    apiKey: 'AIzaSyBLy_kN34eSuL-VS1itYntC7jxjmflVYR4',
+    authDomain: 'shabbat-clusters-dev.firebaseapp.com',
+    databaseURL: 'https://shabbat-clusters-dev.firebaseio.com',
+    projectId: 'shabbat-clusters-dev',
+    storageBucket: 'shabbat-clusters-dev.appspot.com',
+    messagingSenderId: '1007972316275'
   }
 };
