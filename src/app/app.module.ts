@@ -10,6 +10,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule, MdToolbarModule} from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -18,9 +21,15 @@ import { environment } from '../environments/environment';
     BrowserModule,
     FormsModule,
     HttpModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
