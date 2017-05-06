@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +9,14 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  item: FirebaseObjectObservable<any>;
-  constructor(db: AngularFireDatabase) {
-    this.item = db.object('/item');
+  user: Observable<firebase.User>;
+  constructor(public afAuth: AngularFireAuth) {
+    this.user = afAuth.authState;
   }
-  save(newName: string) {
-    this.item.set({ name: newName });
+  login() {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
   }
-  update(newSize: string) {
-    this.item.update({ size: newSize });
-  }
-  delete() {
-    this.item.remove();
+  logout() {
+    this.afAuth.auth.signOut();
   }
 }
