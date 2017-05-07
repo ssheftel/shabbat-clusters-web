@@ -12,6 +12,9 @@ import { environment } from '../environments/environment';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule, MdToolbarModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import {MdButtonModule, MdCheckboxModule, MdToolbarModule} from '@angular/materi
     BrowserAnimationsModule,
     MdButtonModule,
     MdCheckboxModule,
-    MdToolbarModule
+    MdToolbarModule,
+
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
