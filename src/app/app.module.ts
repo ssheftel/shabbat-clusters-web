@@ -17,11 +17,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,

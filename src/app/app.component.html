@@ -1,9 +1,1 @@
-<md-toolbar color="primary">
-  <span>Shabbat Clusters</span>
-</md-toolbar>
-<div> {{ (user | async)?.uid }} </div>
-<img [src]="(user | async)?.photoURL">
-<br/>
-<button (click)="login()" md-button>Login</button>
-<button (click)="logout()" md-button>Logout</button>
 <router-outlet></router-outlet>
